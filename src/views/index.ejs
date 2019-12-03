@@ -1,0 +1,228 @@
+<% include partials/_header%>
+
+<section class="section">
+  <!--h1 class="title">
+LOREM
+</!--h1>
+<p-- class="subtitle">
+LOREM <strong>LOREM</strong>!
+</p-->
+</section>
+
+<div class="is-form">
+  <form action="/add" method="post">
+
+    <div class="container">
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field">
+            <label class="label">Cedula</label>
+            <div class="control">
+              <input class="input" name="nit" type="text" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Nombre</label>
+            <div class="control">
+              <input class="input" name="name" type="text" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Tipo</label>
+            <div class="control">
+              <input class="input" name="tipo" type="text" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Nombre del Equipo</label>
+            <div class="control">
+              <input class="input" name="nameDevice" type="text" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Codigo</label>
+            <div class="control">
+              <input class="input" name="code" type="text" required>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <label class="label">Serial del Equipo</label>
+            <div class="control">
+              <input class="input" name="serialDevice" type="text" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Marca</label>
+            <div class="control">
+              <input class="input" name="brand" type="text" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Modelo</label>
+            <div class="control">
+              <input class="input" name="model" type="text" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Procesador</label>
+            <div class="control">
+              <input class="input" name="processor" type="text" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Memoria Ram</label>
+            <div class="control">
+              <input class="input" name="ram" type="text" required>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <label class="label">Disco Duro</label>
+            <div class="control">
+              <input class="input" name="hdd" type="text" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Sistema Operativo</label>
+            <div class="control">
+              <input class="input" name="os" type="text" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Monitor</label>
+            <div class="control">
+              <input class="input" name="monitor" type="text" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Serial Bateria</label>
+            <div class="control">
+              <input class="input" name="serialBattery" type="text" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Serial del Cargador</label>
+            <div class="control">
+              <input class="input" name="serialCargador" type="text" required>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <label class="label">Accesorios</label>
+            <div class="control">
+              <input class="input" name="accessories" type="text" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Serial Mouse</label>
+            <div class="control">
+              <input class="input" name="serialMouse" type="text" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Serial Teclado</label>
+            <div class="control">
+              <input class="input" name="serialKeyboard" type="text" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Tipo</label>
+            <div class="control">
+              <div class="select">
+                <select name="tipoDevice">
+                  <option>Selecciona tipo de dispositivo</option>
+                  <option value="Portatil">Portatil</option>
+                  <option value="PC">PC</option>
+                  <option value="Tablet">Tablet</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Observacion</label>
+            <div class="control">
+              <input class="input" name="details" type="text" required>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="button is-link" type="submit">Guardar</button>
+  </form>
+</div>
+
+<div class="is-table-content">
+  <div class="table-container">
+    <table class="table is-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Cedula</th>
+          <th>Nombre</th>
+          <th>Tipo</th>
+          <th>Nombre del Equipo</th>
+          <th>Codigo</th>
+          <th>Serial del Equipo</th>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Procesador</th>
+          <th>Memoria Ram</th>
+          <th>Disco Duro</th>
+          <th>Sistema Operativo</th>
+          <th>Monitor</th>
+          <th>Serial Bateria</th>
+          <th>Serial del Cargador</th>
+          <th>Accesorios</th>
+          <th>Serial Mouse</th>
+          <th>Serial Teclado</th>
+          <th>Tipo Dispositivo</th>
+          <th>Observacion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var i = 0; i < devices.length; i++){ %>
+        <tr>
+          <td><%= i + 1%></td>
+          <td><%= devices[i].nit %></td>
+          <td><%= devices[i].name %></td>
+          <td><%= devices[i].tipo %></td>
+          <td><%= devices[i].nameDevice %></td>
+          <td><%= devices[i].code %></td>
+          <td><%= devices[i].serialDevice %></td>
+          <td><%= devices[i].brand %></td>
+          <td><%= devices[i].model %></td>
+          <td><%= devices[i].processor %></td>
+          <td><%= devices[i].ram %></td>
+          <td><%= devices[i].hdd %></td>
+          <td><%= devices[i].os %></td>
+          <td><%= devices[i].monitor %></td>
+          <td><%= devices[i].serialBattery %></td>
+          <td><%= devices[i].serialCargador %></td>
+          <td><%= devices[i].accessories %></td>
+          <td><%= devices[i].serialMouse %></td>
+          <td><%= devices[i].serialKeyboard %></td>
+          <td><%= devices[i].tipoDevice %></td>
+          <td><%= devices[i].details %></td>
+
+          <td class="is-flex">
+            <a href="/enable/<%= devices[i]._id %>"
+              class="button <%= devices[i].status ? '' : 'is-success'  %>">Habilitado</a>
+            <a class="button is-danger" href="/delete/<%= devices[i]._id %>">Eliminar</a>
+            <a class="button is-info" href="/edit/<%= devices[i]._id %>">Editar</a>
+          </td>
+        </tr>
+        <% } %>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+<% include partials/_footer%>

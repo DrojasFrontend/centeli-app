@@ -30,7 +30,15 @@ LOREM <strong>LOREM</strong>!
           <div class="field">
             <label class="label">Tipo</label>
             <div class="control">
-              <input class="input" name="tipo" type="text" required>
+              <div class="select">
+                <select name="tipoDevice">
+                  <option>Selecciona tipo de dispositivo</option>
+                  <option value="Portatil">Portatil</option>
+                  <option value="PC">PC</option>
+                  <option value="Tablet">Tablet</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="field">
@@ -128,21 +136,7 @@ LOREM <strong>LOREM</strong>!
             <div class="control">
               <input class="input" name="serialKeyboard" type="text" required>
             </div>
-          </div>
-          <div class="field">
-            <label class="label">Tipo</label>
-            <div class="control">
-              <div class="select">
-                <select name="tipoDevice">
-                  <option>Selecciona tipo de dispositivo</option>
-                  <option value="Portatil">Portatil</option>
-                  <option value="PC">PC</option>
-                  <option value="Tablet">Tablet</option>
-                  <option value="Otro">Otro</option>
-                </select>
-              </div>
-            </div>
-          </div>
+          </div>          
           <div class="field">
             <label class="label">Observacion</label>
             <div class="control">
@@ -190,7 +184,7 @@ LOREM <strong>LOREM</strong>!
           <td><%= i + 1%></td>
           <td><%= devices[i].nit %></td>
           <td><%= devices[i].name %></td>
-          <td><%= devices[i].tipo %></td>
+          <td><%= devices[i].tipoDevice %></td>
           <td><%= devices[i].nameDevice %></td>
           <td><%= devices[i].code %></td>
           <td><%= devices[i].serialDevice %></td>
@@ -205,8 +199,7 @@ LOREM <strong>LOREM</strong>!
           <td><%= devices[i].serialCargador %></td>
           <td><%= devices[i].accessories %></td>
           <td><%= devices[i].serialMouse %></td>
-          <td><%= devices[i].serialKeyboard %></td>
-          <td><%= devices[i].tipoDevice %></td>
+          <td><%= devices[i].serialKeyboard %></td>          
           <td><%= devices[i].details %></td>
 
           <td class="is-flex">

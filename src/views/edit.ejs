@@ -29,7 +29,15 @@ LOREM <strong>LOREM</strong>!
           <div class="field">
             <label class="label">Tipo</label>
             <div class="control">
-              <input class="input" name="tipo" value="<%= device.tipo %>" type="text">
+              <div class="select">
+                <select name="tipoDevice">
+                  <option><%= device.tipoDevice %></option>
+                  <option value="Portatil">Portatil</option>
+                  <option value="PC">PC</option>
+                  <option value="Tablet">Tablet</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="field">
@@ -127,21 +135,7 @@ LOREM <strong>LOREM</strong>!
             <div class="control">
               <input class="input" name="serialKeyboard" value="<%= device.serialKeyboard %>" type="text">
             </div>
-          </div>
-          <div class="field">
-            <label class="label">Tipo</label>
-            <div class="control">
-              <div class="select">
-                <select name="tipoDevice">
-                  <option><%= device.tipoDevice %></option>
-                  <option value="Portatil">Portatil</option>
-                  <option value="PC">PC</option>
-                  <option value="Tablet">Tablet</option>
-                  <option value="Otro">Otro</option>
-                </select>
-              </div>
-            </div>
-          </div>
+          </div>          
           <div class="field">
             <label class="label">Observacion</label>
             <div class="control">

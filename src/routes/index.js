@@ -45,4 +45,12 @@ router.post('/edit/:id', async (req, res) => {
     res.redirect('/');
 })
 
+router.get('/print/:id', async (req, res) => {
+    const { id } = req.params;
+    const device = await Device.findById(id);
+    res.render('print', {
+        device
+    });
+})
+
 module.exports = router;

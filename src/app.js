@@ -23,6 +23,10 @@ app.set('view engine', 'ejs');
 const indexRoutes = require('./routes/index');
 app.use('/', indexRoutes);
 
+// Routes Print PDF
+const printfMake = require('./routes/pdfmake');
+app.use('/pdfMake', printfMake);
+
 // Connect DB
 mongoose.connect(
     process.env.MONGODB_URI, 

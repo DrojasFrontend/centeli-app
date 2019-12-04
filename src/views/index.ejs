@@ -207,6 +207,7 @@ LOREM <strong>LOREM</strong>!
               class="button <%= devices[i].status ? '' : 'is-success'  %>">Habilitado</a>
             <a class="button is-danger" href="/delete/<%= devices[i]._id %>">Eliminar</a>
             <a class="button is-info" href="/edit/<%= devices[i]._id %>">Editar</a>
+            <a class="button is-info" href="/print/<%= devices[i]._id %>">Imprimir</a>
           </td>
         </tr>
         <% } %>

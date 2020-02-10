@@ -83,7 +83,7 @@ router.post('/pdf', (req, res) => {
                 table: {
                     body: [
                         [{text: 'Entrega:',bold: true}, {text: 'Recibido por:',bold: true}],
-                        [{text: 'Nombre: Osnaider Luquez',bold: true}, {text: 'Nombre:',bold: true}],
+                        [{text: 'Nombre:',bold: true}, {text: 'Nombre:',bold: true}],
                         [{text: 'Firma:',bold: true}, {text: 'Firma',bold: true}],
                         [{text: 'C.C No.____________________',bold: true}, {text: 'C.C No.____________________',bold: true}],
                         

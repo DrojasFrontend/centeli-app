@@ -53,4 +53,36 @@ router.get('/print/:id', async (req, res) => {
     });
 })
 
+// Search $regex
+router.get('/search/:search', (req, res) => {
+    var searchString = req.params.search;
+    Device.find({ "$or": [
+        {"nit": { "$regex": searchString, "$options": "i" }},
+        {"tipoDevice": { "$regex": searchString, "$options": "i" }}
+    ]})
+    .sort([['date', 'descending']])
+    .exec((err, devices) => {
+
+        if(err) {
+            return res.status(500).send({
+                status: 'Error',
+                message: 'Error en la peticion'
+            });
+        }
+
+        if(!devices || devices.length <= 0) {
+            return res.status(404).send({
+                status: 'Error',
+                message: 'no hay resultados'
+            });
+        }
+
+        return res.status(200).send({
+            status: 'success',
+            devices
+        });
+
+    })
+});
+
 module.exports = router;

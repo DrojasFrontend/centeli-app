@@ -8,7 +8,7 @@ const path = require('path');
 const app = express();
 
 // Starting Server
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 4000);
 
 // Middleware
 app.use(morgan('dev'));

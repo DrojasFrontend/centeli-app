@@ -9,7 +9,36 @@ LOREM <strong>LOREM</strong>!
 </p-->
 
 </section>
-
+<div class="container">
+  <div class="search-content">
+    <form class="form-inline my-2 my-lg-0">
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="search" placeholder="Cedula" aria-label="Cedula" id="inputSearchNit" onkeyup="SearchNit()">
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="search" placeholder="Nombre" aria-label="Codigo" id="inputSearchName" onkeyup="SearchName()">
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="search" placeholder="Tipo" aria-label="Codigo" id="inputSearchType" onkeyup="SearchCode()">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+  
 <div class="is-form">
   <form action="/add" method="post">
 
@@ -154,7 +183,7 @@ LOREM <strong>LOREM</strong>!
 
 <div class="is-table-content">
   <div class="table-container">
-    <table class="table is-bordered">
+    <table class="table is-bordered" id="table">
       <thead>
         <tr>
           <th>ID</th>

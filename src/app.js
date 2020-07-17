@@ -29,7 +29,7 @@ app.use('/pdfMake', printfMake);
 
 // Connect DB
 mongoose.connect(
-    'mongodb+srv://daniel:dali2019@cluster0-1ub9z.mongodb.net/test?retryWrites=true&w=majority', 
+    process.env.MONGODB_URI, 
     {
         useNewUrlParser: true, 
         useUnifiedTopology: true
